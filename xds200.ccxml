@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations XML_version="1.2" id="configurations_0">
+<configuration XML_version="1.2" id="Texas Instruments XDS2xx USB Emulator_0">
+        <instance XML_version="1.2" desc="Texas Instruments XDS2xx USB Emulator_0" href="connections/TIXDS2XXUSB_Connection.xml" id="Texas Instruments XDS2xx USB Emulator_0" xml="TIXDS2XXUSB_Connection.xml" xmlpath="connections"/>
+        <connection XML_version="1.2" id="Texas Instruments XDS2xx USB Emulator_0">
+            <instance XML_version="1.2" href="drivers/tixds560cs_dap.xml" id="drivers" xml="tixds560cs_dap.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/tixds560cortexM.xml" id="drivers" xml="tixds560cortexM.xml" xmlpath="drivers"/>
+            <property Type="choicelist" Value="0" id="The JTAG TCLK Frequency (MHz)">
+                <choice Name="Fixed with user specified faster value" value="SPECIFIC">
+                    <property Type="stringfield" Value="20MHz" id="-- Enter a value from 0.5MHz to 20.0MHz"/>
+                </choice>
+            </property>
+            <property Type="choicelist" Value="1" id="Apply nRESET/SRST pin on the emulation header"/>
+            <platform XML_version="1.2" id="platform_0">
+                <instance XML_version="1.2" desc="Tiva TM4C1294NCPDT_0" href="devices/tm4c1294ncpdt.xml" id="Tiva TM4C1294NCPDT_0" xml="tm4c1294ncpdt.xml" xmlpath="devices"/>
+            <device HW_revision="1" XML_version="1.2" description="" id="Tiva TM4C1294NCPDT_0" partnum="TM4C1294NCPDT" simulation="no">
+                    <router HW_revision="1.0" XML_version="1.2" description="CS_DAP Router" id="CS_DAP_0" isa="CS_DAP">
+                        <subpath id="subpath_0">
+                            <cpu HW_revision="1.0" XML_version="1.2" desc="CORTEX_M4_0" description="Cortex M4 CPU" deviceSim="false" id="CORTEX_M4_0" isa="CORTEX_M4"/>
+                        </subpath>
+                    </router>
+                </device>
+            </platform>
+        </connection>
+    </configuration>
+</configurations>
